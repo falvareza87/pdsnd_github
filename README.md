@@ -20,4 +20,5 @@ chicago.csv
 Python documentation https://docs.python.org/3/index.html
 Numpy Library documentation https://docs.scipy.org/doc/numpy-1.13.0/contents.html
 Programming for Data Science with Python Nanodegree Program
-Feedback from Udacity project evaluator/mentor
+Feedback from Udacity project reviewer
+https://www.geeksforgeeks.org/pandas-set_option-function-in-python/
