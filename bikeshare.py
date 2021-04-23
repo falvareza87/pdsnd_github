@@ -2,6 +2,7 @@ import time
 import pandas as pd
 import numpy as np
 from scipy import stats
+from tabulate import tabulate
 
 
 CITY_DATA = { 'chicago': 'chicago.csv',
@@ -215,13 +216,14 @@ def display_raw_data(df):
 
     view_data = input("Would you like to view 5 rows of individual trip data? Enter yes or no?: ").lower()
     start_loc = 0
-
     while True:
-    display_data = input('\nWould you like to see 5 lines of raw data? Enter yes or no.\n')
-    if display_data.lower() != 'yes':
-        break
-    print(tabulate(df_default.iloc[np.arange(0+i,5+i)], headers ="keys"))
-    i+=5
+        if view_data == 'no':
+            break
+        print(df.iloc[start_loc:start_loc+5])
+        start_loc += 5
+        view_display = input("Do you wish to continue?: ").lower()
+        if view_display == 'no':
+            break
 
 def main():
     while True:
